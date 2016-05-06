@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "63D4F4DEBCE289FB625465BAA2F7436BE3CB3771",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "63D4F4DEBCE289FB625465BAA2F7436BE3CB3771" : 0,
+    "EFE5C8870318A3F4C2940A80C46850B85AF0B25B" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F277E584-F47B-4FDC-BFC2-97B5CA32BF63",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "63D4F4DEBCE289FB625465BAA2F7436BE3CB3771" : "PizzaWatchOS\/",
+    "EFE5C8870318A3F4C2940A80C46850B85AF0B25B" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PizzaWatchOS",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PizzaWatchOS.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/horaciogarza\/PizzaBuilderForWatchOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "63D4F4DEBCE289FB625465BAA2F7436BE3CB3771"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/horaciogarza\/ITESMSwiftCertification.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EFE5C8870318A3F4C2940A80C46850B85AF0B25B"
+    }
+  ]
+}

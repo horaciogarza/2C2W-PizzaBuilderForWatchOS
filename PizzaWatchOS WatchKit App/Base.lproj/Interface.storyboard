@@ -34,9 +34,15 @@
                                 <segue destination="GQF-CR-Ehn" kind="push" id="LeM-CR-slh"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Ingredientes" id="iWH-p4-zDt"/>
+                        <button width="1" alignment="left" title="Ingredientes" id="iWH-p4-zDt">
+                            <connections>
+                                <segue destination="px8-Nf-4tn" kind="push" id="Etl-76-G6F"/>
+                            </connections>
+                        </button>
                         <separator alignment="left" id="ldI-1O-Vfe"/>
                         <button width="1" alignment="left" title="Ordenar" id="6o1-LZ-WYO">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="H3N-Ru-CRp" kind="modal" id="nZd-KT-xby"/>
                             </connections>
@@ -76,7 +82,11 @@
             <objects>
                 <controller id="GQF-CR-Ehn" customClass="CheeseInterfaceController" customModule="PizzaWatchOS">
                     <items>
-                        <picker height="100" alignment="left" focusStyle="sequence" id="c6D-Kl-51C"/>
+                        <picker height="100" alignment="left" focusStyle="sequence" id="c6D-Kl-51C">
+                            <connections>
+                                <action selector="selectedOnPicker:" destination="GQF-CR-Ehn" id="0z3-W3-AyX"/>
+                            </connections>
+                        </picker>
                         <label width="1" alignment="left" hidden="YES" text="Label" id="wuS-dw-Dkd"/>
                         <button width="1" alignment="left" title="Seleccionar" id="cqu-1M-jmQ">
                             <connections>
@@ -91,14 +101,69 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="242" y="553"/>
+            <point key="canvasLocation" x="442" y="611"/>
         </scene>
         <!--Interface Controller-->
+        <scene sceneID="y79-1G-cpb">
+            <objects>
+                <controller id="lx4-9Z-73Q">
+                    <items>
+                        <button width="1" alignment="left" title="Button" id="gV5-Ro-BeE">
+                            <connections>
+                                <segue destination="GQF-CR-Ehn" kind="modal" id="L8g-3D-ErU"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="277" y="903"/>
+        </scene>
+        <!--Ingredientes Interface Controller-->
         <scene sceneID="1TV-0S-ZUQ">
             <objects>
-                <controller id="px8-Nf-4tn"/>
+                <controller id="px8-Nf-4tn" customClass="IngredientesInterfaceController" customModule="PizzaWatchOS_WatchKit_Extension">
+                    <items>
+                        <switch width="1" alignment="left" title="Jamon" id="9aG-do-Kc7">
+                            <connections>
+                                <action selector="jamonSelected:" destination="px8-Nf-4tn" id="EE5-gu-IUa"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Pepperoni" id="mNs-KA-g58"/>
+                        <switch width="1" alignment="left" title="Pavo" id="fwo-SH-uew"/>
+                        <switch width="1" alignment="left" title="Salchicha" id="Aku-ds-W5I"/>
+                        <switch width="1" alignment="left" title="Aceituna" id="har-Xb-h4f"/>
+                        <switch width="1" alignment="left" title="Cebolla" id="BE2-yl-q45"/>
+                        <button width="1" alignment="left" title="Seleccionar Ingredientes" id="nsJ-EB-Y6e">
+                            <connections>
+                                <segue destination="lx4-9Z-73Q" kind="modal" id="qNB-cC-T0j"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="aceitunaSwitch" destination="har-Xb-h4f" id="7sD-EN-k7V"/>
+                        <outlet property="cebollaSwitch" destination="BE2-yl-q45" id="bKN-nk-Kfl"/>
+                        <outlet property="jamonSwitch" destination="9aG-do-Kc7" id="MTj-O9-YKC"/>
+                        <outlet property="pavoSwitch" destination="fwo-SH-uew" id="L36-fb-b7U"/>
+                        <outlet property="pepperoniSwitch" destination="mNs-KA-g58" id="MAS-Oo-eBL"/>
+                        <outlet property="salchichaSwitch" destination="Aku-ds-W5I" id="uLC-wz-whQ"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="522" y="852"/>
+            <point key="canvasLocation" x="-69" y="774.75"/>
+        </scene>
+        <!--errorController-->
+        <scene sceneID="VGx-eg-9cr">
+            <objects>
+                <controller identifier="errorController" id="YhJ-3m-wC7">
+                    <items>
+                        <label width="136" alignment="left" text="Haz excedido el numero maximo de Ingredientes ☹️" textAlignment="left" numberOfLines="4" id="DqQ-O6-8vA"/>
+                        <button width="1" alignment="left" title="Entendido!" id="S3g-J1-Niq">
+                            <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-93" y="1130"/>
         </scene>
         <!--Masa Interface Controller-->
         <scene sceneID="vbk-03-Mc5">
@@ -127,4 +192,7 @@
             <point key="canvasLocation" x="522" y="302"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="L8g-3D-ErU"/>
+    </inferredMetricsTieBreakers>
 </document>

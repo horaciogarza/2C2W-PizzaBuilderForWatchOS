@@ -16,6 +16,7 @@ class CheeseInterfaceController: WKInterfaceController {
     @IBOutlet var cheesePicker: WKInterfacePicker!
     var itemsOnPicker:[WKPickerItem]?
     let cheeseCaption = "Tipo de Queso"
+    var selectedOnPicker:String?
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -54,8 +55,16 @@ class CheeseInterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+    @IBAction func selectedOnPicker(value: Int) {
+        selectedOnPicker = itemsOnPicker![value].title
+        
+    }
     
     @IBAction func cheeseButtonClick() {
+        
+        Pizza.sharedPizza.queso = selectedOnPicker;
+        cheeseLabel.setText(selectedOnPicker! + " seleccionado")
+        
         
     }
 
