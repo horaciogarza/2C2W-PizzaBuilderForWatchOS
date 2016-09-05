@@ -17,7 +17,7 @@ class OptionsInterfaceController: WKInterfaceController {
     @IBOutlet var labelSizeSelected: WKInterfaceLabel!
     
     var sizePickerItems = ["Chica","Mediana","Grande"]
-    var selectedItem:String?
+    var selectedItem:String = "Chica"
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -64,9 +64,18 @@ class OptionsInterfaceController: WKInterfaceController {
     }
     @IBAction func selectSize() {
         
+        
         Pizza.sharedPizza.tamaño = selectedItem;
-        labelSizeSelected.setHidden(false)
-        labelSizeSelected.setText("\(selectedItem!) será")
+        
+        let action3 = WKAlertAction(title: "Aceptar", style: .Cancel) {}
+        
+        
+        presentAlertControllerWithTitle( "Gracias",
+                                         message: "Tu tamaño preferido ha sido elegido, favor de regresar al menu",
+                                         preferredStyle: WKAlertControllerStyle.Alert,
+                                         actions: [action3])
+
+        
     }
 
 }

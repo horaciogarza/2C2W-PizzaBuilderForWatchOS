@@ -15,15 +15,16 @@ class Pizza{
     var tamaño:String?
     var masa:String?
     var queso:String?
-    var ingredientes:String?
-    var horaDeLlegada:NSDate?
+    var ingredientes:NSMutableDictionary = ["jamon": false, "pepperoni": false, "pavo": false, "salchicha": false, "aceituna": false, "cebolla": false, "pimiento": false, "piña": false,   "anchoa": false]
+    var horaDeLlegada:NSDate!
+    
+    
     
     init(){
         
         self.tamaño = ""
         self.masa = ""
         self.queso = ""
-        self.ingredientes = ""
         self.horaDeLlegada = NSDate()
     }
     

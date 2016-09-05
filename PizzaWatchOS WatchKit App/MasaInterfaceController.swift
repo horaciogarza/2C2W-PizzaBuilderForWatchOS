@@ -15,7 +15,7 @@ class MasaInterfaceController: WKInterfaceController {
     @IBOutlet var masaPicker: WKInterfacePicker!
     
     @IBOutlet var labelMasa: WKInterfaceLabel!
-    var masaSeleccionada:String?
+    var masaSeleccionada:String = "Delgada"
     var sizePickerItems = ["Delgada","Gruesa","Crujiente"]
     
     override func awakeWithContext(context: AnyObject?) {
@@ -63,8 +63,15 @@ class MasaInterfaceController: WKInterfaceController {
     }
     @IBAction func masaSeleccionadaOnClick() {
         Pizza.sharedPizza.masa = masaSeleccionada;
-        labelMasa.setText("\(masaSeleccionada!) será")
-        labelMasa.setHidden(false)
+        
+        let action3 = WKAlertAction(title: "Aceptar", style: .Cancel) {}
+        
+        
+        presentAlertControllerWithTitle( "Gracias",
+                                         message: "Tu tipo de masa ha sido elegido, favor de regresar al menu",
+                                         preferredStyle: WKAlertControllerStyle.Alert,
+                                         actions: [action3])
+
     }
    
     

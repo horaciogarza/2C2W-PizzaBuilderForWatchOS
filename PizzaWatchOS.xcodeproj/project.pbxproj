@@ -26,6 +26,8 @@
 		47BAE6A61CDACC950031FD95 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BAE6A41CDACC950031FD95 /* File.swift */; };
 		47BAE6A81CDACEBD0031FD95 /* MasaInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BAE6A71CDACEBD0031FD95 /* MasaInterfaceController.swift */; };
 		47BAE6AB1CDB02FD0031FD95 /* CheeseInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BAE6A91CDB02FD0031FD95 /* CheeseInterfaceController.swift */; };
+		47F012A11D7D0C6000D537EA /* OrderInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F012A01D7D0C6000D537EA /* OrderInterfaceController.swift */; };
+		47F012A21D7D0C6000D537EA /* OrderInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F012A01D7D0C6000D537EA /* OrderInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,7 @@
 		47BAE6A41CDACC950031FD95 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		47BAE6A71CDACEBD0031FD95 /* MasaInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasaInterfaceController.swift; path = "../PizzaWatchOS WatchKit App/MasaInterfaceController.swift"; sourceTree = "<group>"; };
 		47BAE6A91CDB02FD0031FD95 /* CheeseInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheeseInterfaceController.swift; path = "../PizzaWatchOS WatchKit App/CheeseInterfaceController.swift"; sourceTree = "<group>"; };
+		47F012A01D7D0C6000D537EA /* OrderInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				4729FF311CD9C60300C758F1 /* Interface.storyboard */,
+				47F012A01D7D0C6000D537EA /* OrderInterfaceController.swift */,
 				47BAE6A41CDACC950031FD95 /* File.swift */,
 				4729FF341CD9C60300C758F1 /* Assets.xcassets */,
 				4729FF361CD9C60300C758F1 /* Info.plist */,
@@ -317,6 +321,7 @@
 			files = (
 				4729FF201CD9C60300C758F1 /* ViewController.swift in Sources */,
 				47BAE6A51CDACC950031FD95 /* File.swift in Sources */,
+				47F012A11D7D0C6000D537EA /* OrderInterfaceController.swift in Sources */,
 				4729FF1E1CD9C60300C758F1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +333,7 @@
 				47BAE6A61CDACC950031FD95 /* File.swift in Sources */,
 				4729FF5A1CD9C67900C758F1 /* OptionsInterfaceController.swift in Sources */,
 				4729FF471CD9C60300C758F1 /* NotificationController.swift in Sources */,
+				47F012A21D7D0C6000D537EA /* OrderInterfaceController.swift in Sources */,
 				4729FF451CD9C60300C758F1 /* ExtensionDelegate.swift in Sources */,
 				4729FF431CD9C60300C758F1 /* InterfaceController.swift in Sources */,
 				47BAE6AB1CDB02FD0031FD95 /* CheeseInterfaceController.swift in Sources */,
