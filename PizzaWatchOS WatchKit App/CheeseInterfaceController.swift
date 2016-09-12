@@ -32,6 +32,7 @@ class CheeseInterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        Pizza.sharedPizza.cheeseActivate = true
         //Seleccionar el tipo de queso: mozarela, cheddar, parmesano, sin queso
         
         let itemMozarela = WKPickerItem()

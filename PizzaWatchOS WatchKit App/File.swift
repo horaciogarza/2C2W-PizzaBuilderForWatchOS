@@ -12,6 +12,8 @@ class Pizza{
     
     static let sharedPizza = Pizza()
     
+    var sizeActivate = false, breadActivate = false, cheeseActivate = false, ingredientsActivate = false
+    
     var tamaño:String?
     var masa:String?
     var queso:String?

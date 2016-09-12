@@ -27,6 +27,7 @@ class MasaInterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        Pizza.sharedPizza.breadActivate = true
         
         let captionForPicker = "Tipo de Masa"
         

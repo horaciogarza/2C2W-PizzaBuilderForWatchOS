@@ -29,53 +29,59 @@ class InterfaceController: WKInterfaceController {
     }
     @IBAction func orderClick() {
         
-        if let size = Pizza.sharedPizza.tamaño, cheese = Pizza.sharedPizza.queso,
-            bread = Pizza.sharedPizza.masa{
+        if Pizza.sharedPizza.breadActivate &&  Pizza.sharedPizza.cheeseActivate && Pizza.sharedPizza.sizeActivate && Pizza.sharedPizza.ingredientsActivate{
             
-            var countOfIngredients = 0
-            var ingredientsString:String = ""
-            for key in Pizza.sharedPizza.ingredientes.allKeys{
+            if let size = Pizza.sharedPizza.tamaño, cheese = Pizza.sharedPizza.queso,
+                bread = Pizza.sharedPizza.masa{
                 
-                if (Pizza.sharedPizza.ingredientes[key as! String] != nil){
-                    countOfIngredients = countOfIngredients + 1
+                var countOfIngredients = 0
+                var ingredientsString:String = ""
+                for key in Pizza.sharedPizza.ingredientes.allKeys{
+                    
+                    if (Pizza.sharedPizza.ingredientes[key as! String] != nil){
+                        countOfIngredients = countOfIngredients + 1
+                    }
+                    ingredientsString += "\(key), "
                 }
-                ingredientsString += "\(key), "
-            }
-            
-            let summary = "Tamaño: \(size), \nQueso: \(cheese)\nMasa: \(bread)\nIngredientes: \(ingredientsString)"
-            
-            if !(countOfIngredients > 0) {
-                showError()
+                
+                let summary = "Tamaño: \(size), \nQueso: \(cheese)\nMasa: \(bread)\nIngredientes: \(ingredientsString)"
+                
+                if !(countOfIngredients > 0) {
+                    showError()
+                }else{
+                    
+                    let action3 = WKAlertAction(title: "Aceptar", style: WKAlertActionStyle.Default) {
+                        
+                        print("prro")
+                        self.presentControllerWithName("orderScreen", context: nil)
+                        
+                    }
+                    
+                    
+                    
+                    presentAlertControllerWithTitle( "Rectifica antes de solicitarlo",
+                                                     message: summary,
+                                                     preferredStyle: WKAlertControllerStyle.Alert,
+                                                     actions: [action3])
+                }
+                
+                
+                
             }else{
                 
-                let action3 = WKAlertAction(title: "Aceptar", style: WKAlertActionStyle.Default) {
-                    
-                    print("prro")
-                    self.presentControllerWithName("orderScreen", context: nil)
-                    
-                }
-                
-                
-                
-                presentAlertControllerWithTitle( "Limite excedido",
-                                                 message: summary,
-                                                 preferredStyle: WKAlertControllerStyle.Alert,
-                                                 actions: [action3])
+                showError()
             }
-            
-            
-            
         }else{
-            
             showError()
         }
+        
         
     }
     
     func showError(){
         let action3 = WKAlertAction(title: "Aceptar", style: WKAlertActionStyle.Default) {}
         
-        presentAlertControllerWithTitle( "Limite excedido",
+        presentAlertControllerWithTitle( "No tan rápido alguacil!",
                                          message: "Aún te falta por completar de elegir algunas cosas, mejor checa bien",
                                          preferredStyle: WKAlertControllerStyle.Alert,
                                          actions: [action3])

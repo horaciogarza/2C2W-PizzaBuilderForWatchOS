@@ -28,6 +28,8 @@ class OptionsInterfaceController: WKInterfaceController {
 
     override func willActivate() {
         
+        Pizza.sharedPizza.sizeActivate = true
+        
         super.willActivate()
         let caption = "Tamaño"
         
